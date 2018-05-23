@@ -1,7 +1,10 @@
 package com.ylxt.gpmanagement.work.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.DownloadManager;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -56,7 +59,7 @@ public class ShengbaoShowActivity extends BaseActivity implements View.OnClickLi
         mTvGuideTeacher.setText(Info.mShengbaoData.guideTeacher);
         Log.d(TAG, "onCreate: " + Info.mShengbaoData.attachment);
 
-        if (Info.mShengbaoData.attachment == null) {
+        if (TextUtils.isEmpty(Info.mShengbaoData.attachment) || Info.mShengbaoData.attachment.equals("null")) {
             mTvFileName.setText("无附件");
             mFujian.setClickable(false);
         } else {
@@ -72,9 +75,11 @@ public class ShengbaoShowActivity extends BaseActivity implements View.OnClickLi
                 finish();
                 break;
             case R.id.bt_fujian:
-                /**
-                 * 下载文件
-                 */
+                Log.d(TAG, "onClick: " + Info.mShengbaoData.attachment);
+                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(Info.mShengbaoData.attachment/*"http://120.79.196.225:8080/GPManagement/DECLARE_SUBJECT_PATH/04163216/07f8eba28cf04f94b66759cdca5faeac.jpg"*/));
+                request.setDestinationInExternalPublicDir("/download/", "shengbao");
+                DownloadManager downloadManager= (DownloadManager) this.getSystemService(Context.DOWNLOAD_SERVICE);
+                downloadManager.enqueue(request);
                 break;
         }
     }

@@ -1,5 +1,7 @@
 package com.ylxt.gpmanagement.work.presenter;
 
+import android.util.Log;
+
 import com.ylxt.gpmanagement.base.presenter.BasePresenter;
 import com.ylxt.gpmanagement.base.rx.BaseSubscriber;
 import com.ylxt.gpmanagement.work.presenter.view.ShengbaoView;
@@ -22,9 +24,32 @@ import rx.schedulers.Schedulers;
 
 public class ShengbaoPresenter extends BasePresenter<ShengbaoView> {
 
+    private static final String TAG = "ShengbaoPresenter";
     private ShengbaoService mShengbaoService = new ShengbaoServceImpl();
 
     public void postFujian(MultipartBody.Part body) {
+        mShengbaoService.postFujian(0, body)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new BaseSubscriber<ResponseBody>() {
+                    @Override
+                    public void onNext(ResponseBody responseBody) {
+                        super.onNext(responseBody);
+                        try {
+                            Log.d(TAG, "onNext: 66666666666666666666666");
+                            JSONObject jsonObject = new JSONObject(responseBody.string());
+                            int status = jsonObject.getInt("status");
+                            String msg = jsonObject.getString("msg");
+                            String data = jsonObject.getString("data");
+                            Log.d(TAG, "onNext: " + status + msg + "\n" + data);
+                            mView.onPostFujian(status, msg);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
 
     }
 

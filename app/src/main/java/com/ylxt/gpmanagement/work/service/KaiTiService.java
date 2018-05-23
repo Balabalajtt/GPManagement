@@ -9,7 +9,7 @@ import rx.Observable;
  */
 
 public interface KaiTiService {
-    Observable<ResponseBody> postKaiTiFujian(MultipartBody.Part body);
+    Observable<ResponseBody> postKaiTiFujian(int type, MultipartBody.Part body);
     Observable<ResponseBody> postKaiTi();
 
 }

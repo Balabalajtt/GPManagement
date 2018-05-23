@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.ylxt.gpmanagement.R;
 import com.ylxt.gpmanagement.base.common.FileUtil;
 import com.ylxt.gpmanagement.base.ui.activity.BaseMvpActivity;
+import com.ylxt.gpmanagement.work.data.gson.Shengbao;
 import com.ylxt.gpmanagement.work.presenter.ShengbaoPresenter;
 import com.ylxt.gpmanagement.work.presenter.view.ShengbaoView;
 
@@ -38,7 +39,6 @@ public class ShengbaoActivity extends BaseMvpActivity<ShengbaoPresenter> impleme
     private EditText mEdTarget;
     private EditText mEdGuideTeacher;
 
-    private Button mBtFujian;
     private Button mBtChoose;
     private TextView mTvWenjian;
 
@@ -67,13 +67,11 @@ public class ShengbaoActivity extends BaseMvpActivity<ShengbaoPresenter> impleme
         mEdTarget = findViewById(R.id.et_target);
         mEdGuideTeacher = findViewById(R.id.et_guideTeacher);
 
-        mBtFujian = findViewById(R.id.bt_fujian);
         mBtChoose = findViewById(R.id.bt_choose);
         mTvWenjian = findViewById(R.id.tv_wenjian);
 
         mButton = findViewById(R.id.bt_tijiao);
 
-        mBtFujian.setOnClickListener(this);
         mBtChoose.setOnClickListener(this);
         mButton.setOnClickListener(this);
 
@@ -89,11 +87,6 @@ public class ShengbaoActivity extends BaseMvpActivity<ShengbaoPresenter> impleme
                 openFileManager();
                 break;
             case R.id.bt_fujian:
-                RequestBody requestFile = RequestBody
-                        .create(MediaType.parse("*/*"), mFile);
-                MultipartBody.Part body = MultipartBody.Part
-                        .createFormData("file", mFile.getName(), requestFile);
-                mPresenter.postFujian(body);
                 break;
             case R.id.bt_tijiao:
                 mPresenter.postShengbao(
@@ -105,6 +98,7 @@ public class ShengbaoActivity extends BaseMvpActivity<ShengbaoPresenter> impleme
                         mEdAbility.getText().toString(),
                         mEdTarget.getText().toString(),
                         mEdGuideTeacher.getText().toString());
+
                 break;
         }
     }
@@ -128,18 +122,31 @@ public class ShengbaoActivity extends BaseMvpActivity<ShengbaoPresenter> impleme
                 if (mFile.exists()) {
                     mTvWenjian.setText("文件选择成功：" + mFile.getName());
                     Log.d(TAG, "onActivityResult: " + mFilePath);
-                    mBtFujian.setClickable(true);
                     return;
                 }
             }
             mTvWenjian.setText("文件选择失败");
-            mBtFujian.setClickable(true);
 
         }
     }
 
     @Override
     public void onPostShengbao(int status, String msg) {
+        if (status == 1) {
+
+            RequestBody requestFile = RequestBody
+                    .create(MediaType.parse("*/*"), mFile);
+            MultipartBody.Part body = MultipartBody.Part
+                    .createFormData("file", mFile.getName(), requestFile);
+            mPresenter.postFujian(body);
+
+        }
+        Toast.makeText(ShengbaoActivity.this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPostFujian(int status, String msg) {
+
         if (status == 1) {
             startActivity(new Intent(ShengbaoActivity.this, MainActivity.class));
             finish();

@@ -15,9 +15,9 @@ import rx.Observable;
 public class KaiTiServiceImpl implements KaiTiService {
 
     @Override
-    public Observable<ResponseBody> postKaiTiFujian(MultipartBody.Part body) {
+    public Observable<ResponseBody> postKaiTiFujian(int type, MultipartBody.Part body) {
         return RetrofitFactory.INSTANCE.create(SubjectApi.class)
-                .postKaiTiFujian(body);
+                .postFujian(type, body);
     }
 
     @Override

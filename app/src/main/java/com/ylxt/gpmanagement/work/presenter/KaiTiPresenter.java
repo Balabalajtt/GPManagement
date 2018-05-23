@@ -30,7 +30,7 @@ public class KaiTiPresenter extends BasePresenter<KaiTiView> {
     private KaiTiService mService = new KaiTiServiceImpl();
 
     public void postKaiTFujian(MultipartBody.Part body) {
-        mService.postKaiTiFujian(body)
+        mService.postKaiTiFujian(1, body)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(new BaseSubscriber<ResponseBody>() {

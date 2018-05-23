@@ -38,10 +38,12 @@ public class SubjectPresenter extends BasePresenter<SubjectView> {
                             JSONObject jsonObject = new JSONObject(responseBody.string());
                             int status = jsonObject.getInt("status");
                             String msg = jsonObject.getString("msg");
+                            Log.d(TAG, "onNext: " + msg);
                             if (status == 0) {
                                 mView.onUnShengbao();
                             } else {
                                 JSONObject jd = jsonObject.getJSONObject("data");
+                                Log.d(TAG, "onNext: " + jd);
                                 ShengbaoData data = new ShengbaoData(
                                         jd.getInt("id"),
                                         jd.getString("studentName"),

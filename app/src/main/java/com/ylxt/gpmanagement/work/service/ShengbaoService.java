@@ -1,6 +1,8 @@
 package com.ylxt.gpmanagement.work.service;
 
+import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
+import rx.Completable;
 import rx.Observable;
 
 /**
@@ -9,4 +11,6 @@ import rx.Observable;
 
 public interface ShengbaoService {
     Observable<ResponseBody> postShengbao(String name, String ts, String st, String tt, String tp, String ab, String ta, String gt);
+
+    Observable<ResponseBody> postFujian(int type, MultipartBody.Part body);
 }

@@ -182,16 +182,16 @@
                     android:background="@color/colorPrimary" />
 
 
-                <Button
-                    android:id="@+id/bt_fujian"
-                    android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_gravity="center_vertical"
-                    android:text="文件上传"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorPrimary"
-                    android:clickable="false"/>
+                <!--<Button-->
+                    <!--android:id="@+id/bt_fujian"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="24dp"-->
+                    <!--android:layout_marginRight="16dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:text="文件上传"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:background="@color/colorPrimary"-->
+                    <!--android:clickable="false"/>-->
 
             </LinearLayout>
 

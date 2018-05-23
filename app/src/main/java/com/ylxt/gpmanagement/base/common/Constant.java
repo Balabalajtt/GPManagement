@@ -20,6 +20,7 @@ public class Constant {
     public static final String CHANGEINFO = "user/update_information.do";
     public static final String SHENGBAO = "subject/declare_subject.do";
     public static final String CHECK_SHENGBAO = "subject/get_declare_subject.do";
+    public static final String FUJIAN = "file/upload.do";
 
 
     public static Context context = null;

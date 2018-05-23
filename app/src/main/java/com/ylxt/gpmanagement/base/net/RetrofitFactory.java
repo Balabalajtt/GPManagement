@@ -32,7 +32,7 @@ public class RetrofitFactory {
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request()
                         .newBuilder()
-                        .addHeader("Host", "120.79.196.225")
+                        .addHeader("Host", "120.79.196.225:8080")//坑爹坑爹坑爹 请求不影响 后台调getServerPort()那一系列方法是从Header掉的，加端口的时候获取的不是请求url的端口，是默认的80端口
                         .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0")
                         .addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
                         .addHeader("Accept-Language", "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2")

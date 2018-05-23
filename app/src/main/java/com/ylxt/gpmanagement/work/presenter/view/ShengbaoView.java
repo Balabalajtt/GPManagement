@@ -8,4 +8,6 @@ import com.ylxt.gpmanagement.base.presenter.view.BaseView;
 
 public interface ShengbaoView extends BaseView {
     void onPostShengbao(int status, String msg);
+
+    void onPostFujian(int status, String msg);
 }
