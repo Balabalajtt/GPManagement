@@ -10,4 +10,5 @@ public interface LoginView extends BaseView {
     void onLoginFail(String msg);
     void onLoginSucc(String msg);
 
+    void onLoginTeacherSucc(String msg);
 }

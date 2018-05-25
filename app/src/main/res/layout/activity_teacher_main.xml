@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ylxt.gpmanagement.teacher.ui.activity.TeacherMainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="教 师 端 管 理"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_shenbao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="处理申报课题" />
+
+            <Button
+                android:id="@+id/bt_fabu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="发布课题" />
+
+            <Button
+                android:id="@+id/bt_my_subjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我管理的课题" />
+
+            <Button
+                android:id="@+id/bt_faxin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="发信箱"/>
+
+            <Button
+                android:id="@+id/bt_shouxin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="收信箱"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

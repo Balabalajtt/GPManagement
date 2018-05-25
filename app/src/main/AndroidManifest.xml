@@ -15,7 +15,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".work.ui.activity.MainActivity" />
         <activity android:name=".work.ui.activity.KaiTiActivity" />
-        <activity android:name=".work.ui.activity.LogActivity">
+        <activity
+            android:name=".work.ui.activity.LogActivity"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +27,15 @@
         <activity android:name=".work.ui.activity.ShengbaoActivity" />
         <activity android:name=".work.ui.activity.ShengbaoShowActivity" />
         <activity android:name=".work.ui.activity.GongGaoActivity" />
-        <activity android:name=".teacher.ui.activity.TeacherMainActivity"></activity>
+        <activity android:name=".teacher.ui.activity.TeacherMainActivity" />
+        <activity android:name=".teacher.ui.activity.TeacherShenbaoActivity" />
+        <activity android:name=".teacher.ui.activity.TeacherAllSubjectActivity" />
+        <activity android:name=".work.ui.activity.XuantiActivity" />
+        <activity android:name=".work.ui.activity.ShouXinActivity" />
+        <activity android:name=".work.ui.activity.SendActivity" />
+        <activity android:name=".work.ui.activity.RizhiActivity" />
+        <activity android:name=".teacher.ui.activity.ShenbaoShowActivity" />
+        <activity android:name=".teacher.ui.activity.TeacherAddSubjectActivity"></activity>
     </application>
 
 </manifest>

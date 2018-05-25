@@ -1,10 +1,12 @@
 package com.ylxt.gpmanagement.work.data.gson;
 
+import java.io.Serializable;
+
 /**
  * Created by 江婷婷 on 2018/5/21.
  */
 
-public class ShengbaoData {
+public class SubjectData implements Serializable {
     public int id;
     public String studentName;
     public String number;
@@ -16,10 +18,11 @@ public class ShengbaoData {
     public String ability;
     public String target;
     public String guideTeacher;
+    public int source;
     public String attachment;
     public int status;
 
-    public ShengbaoData(int id, String studentName, String number, String subjectName, String topicSource, String subjectType, String topicType, String topicPaper, String ability, String target, String guideTeacher, String attachment, int status) {
+    public SubjectData(int id, String studentName, String number, String subjectName, String topicSource, String subjectType, String topicType, String topicPaper, String ability, String target, String guideTeacher, int source, String attachment, int status) {
         this.id = id;
         this.studentName = studentName;
         this.number = number;
@@ -31,8 +34,17 @@ public class ShengbaoData {
         this.ability = ability;
         this.target = target;
         this.guideTeacher = guideTeacher;
+        this.source = source;
         this.attachment = attachment;
         this.status = status;
+    }
+
+    public int getSource() {
+        return source;
+    }
+
+    public void setSource(int source) {
+        this.source = source;
     }
 
     public int getId() {

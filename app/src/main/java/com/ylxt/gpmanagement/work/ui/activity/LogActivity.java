@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.ylxt.gpmanagement.R;
 import com.ylxt.gpmanagement.base.common.Constant;
 import com.ylxt.gpmanagement.base.ui.activity.BaseMvpActivity;
+import com.ylxt.gpmanagement.teacher.ui.activity.TeacherMainActivity;
+import com.ylxt.gpmanagement.work.data.gson.Teacher;
 import com.ylxt.gpmanagement.work.presenter.LoginPresenter;
 import com.ylxt.gpmanagement.work.presenter.view.LoginView;
 
@@ -74,6 +76,13 @@ public class LogActivity extends BaseMvpActivity<LoginPresenter> implements Logi
     public void onLoginSucc(String msg) {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
         startActivity(new Intent(LogActivity.this, MainActivity.class));
+        finish();
+    }
+
+    @Override
+    public void onLoginTeacherSucc(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(LogActivity.this, TeacherMainActivity.class));
         finish();
     }
 }

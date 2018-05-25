@@ -1,6 +1,6 @@
 package com.ylxt.gpmanagement.base.common;
 
-import com.ylxt.gpmanagement.work.data.gson.ShengbaoData;
+import com.ylxt.gpmanagement.work.data.gson.SubjectData;
 
 /**
  * Created by 江婷婷 on 2018/5/21.
@@ -13,6 +13,6 @@ public class Info {
     public static String phone = "";
     public static String email = "";
 
-    public static ShengbaoData mShengbaoData = null;
+    public static SubjectData mSubjectData = null;
 
 }

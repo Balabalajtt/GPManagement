@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.ylxt.gpmanagement.R;
 import com.ylxt.gpmanagement.base.common.FileUtil;
 import com.ylxt.gpmanagement.base.ui.activity.BaseMvpActivity;
-import com.ylxt.gpmanagement.work.data.gson.Shengbao;
 import com.ylxt.gpmanagement.work.presenter.ShengbaoPresenter;
 import com.ylxt.gpmanagement.work.presenter.view.ShengbaoView;
 

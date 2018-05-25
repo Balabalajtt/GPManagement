@@ -1,6 +1,9 @@
 package com.ylxt.gpmanagement.work.data.api;
 
 import com.ylxt.gpmanagement.base.common.Constant;
+import com.ylxt.gpmanagement.work.data.gson.Rizhi;
+import com.ylxt.gpmanagement.work.data.gson.Teacher;
+import com.ylxt.gpmanagement.work.data.gson.Xin;
 
 import okhttp3.ResponseBody;
 import retrofit2.http.Field;
@@ -26,4 +29,22 @@ public interface MineApi {
     @FormUrlEncoded
     @Headers("Content-Type: application/x-www-form-urlencoded")
     Observable<ResponseBody> changeInfo(@Field("phone") String phone, @Field("email") String email);
+
+
+    @POST(Constant.TEACHERINFO)
+    Observable<Teacher> getTeacherInfo();
+
+    @POST(Constant.SHOUXIN)
+    Observable<Xin> getShouxin();
+
+    @POST(Constant.SENDMESSAGE)
+    @FormUrlEncoded
+    @Headers("Content-Type: application/x-www-form-urlencoded")
+    Observable<ResponseBody> sendMessage(@Field("targetName") String name, @Field("message") String content);
+
+    @POST(Constant.FAXIN)
+    Observable<Xin> getFaxin();
+
+    @POST(Constant.RIZHI)
+    Observable<Rizhi> getRizhi();
 }

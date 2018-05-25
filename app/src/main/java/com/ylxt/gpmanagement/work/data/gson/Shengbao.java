@@ -1,13 +1,15 @@
 package com.ylxt.gpmanagement.work.data.gson;
 
+import java.util.List;
+
 /**
- * Created by 江婷婷 on 2018/5/21.
+ * Created by 江婷婷 on 2018/5/24.
  */
 
 public class Shengbao {
     public int status;
     public String msg;
-    public Shengbao data;
+    public SubjectData data;
 
     public int getStatus() {
         return status;
@@ -25,11 +27,11 @@ public class Shengbao {
         this.msg = msg;
     }
 
-    public Shengbao getData() {
+    public SubjectData getData() {
         return data;
     }
 
-    public void setData(Shengbao data) {
+    public void setData(SubjectData data) {
         this.data = data;
     }
 }

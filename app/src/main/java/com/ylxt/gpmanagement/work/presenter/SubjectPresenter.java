@@ -5,17 +5,16 @@ import android.util.Log;
 import com.ylxt.gpmanagement.base.common.Info;
 import com.ylxt.gpmanagement.base.presenter.BasePresenter;
 import com.ylxt.gpmanagement.base.rx.BaseSubscriber;
-import com.ylxt.gpmanagement.work.data.gson.ShengbaoData;
+import com.ylxt.gpmanagement.work.data.gson.Shengbao;
+import com.ylxt.gpmanagement.work.data.gson.Subject;
 import com.ylxt.gpmanagement.work.presenter.view.SubjectView;
 import com.ylxt.gpmanagement.work.service.SubjectService;
 import com.ylxt.gpmanagement.work.service.impl.SubjectServiceImpl;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.IOException;
 
-import okhttp3.ResponseBody;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -30,44 +29,20 @@ public class SubjectPresenter extends BasePresenter<SubjectView> {
         mSubjectService.checkShengbao()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
-                .subscribe(new BaseSubscriber<ResponseBody>() {
+                .subscribe(new BaseSubscriber<Shengbao>() {
                     @Override
-                    public void onNext(ResponseBody responseBody) {
-                        super.onNext(responseBody);
-                        try {
-                            JSONObject jsonObject = new JSONObject(responseBody.string());
-                            int status = jsonObject.getInt("status");
-                            String msg = jsonObject.getString("msg");
-                            Log.d(TAG, "onNext: " + msg);
-                            if (status == 0) {
-                                mView.onUnShengbao();
-                            } else {
-                                JSONObject jd = jsonObject.getJSONObject("data");
-                                Log.d(TAG, "onNext: " + jd);
-                                ShengbaoData data = new ShengbaoData(
-                                        jd.getInt("id"),
-                                        jd.getString("studentName"),
-                                        jd.getString("number"),
-                                        jd.getString("subjectName"),
-                                        jd.getString("topicSource"),
-                                        jd.getString("subjectType"),
-                                        jd.getString("topicType"),
-                                        jd.getString("topicPaper"),
-                                        jd.getString("ability"),
-                                        jd.getString("target"),
-                                        jd.getString("guideTeacher"),
-                                        jd.getString("attachment"),
-                                        jd.getInt("status")
-                                );
-                                Info.mShengbaoData = data;
-                                mView.onShengbao();
-
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                    public void onNext(Shengbao shenbao) {
+                        super.onNext(shenbao);
+                        int status = shenbao.status;
+                        String msg = shenbao.msg;
+                        Log.d(TAG, "onNext: " + msg);
+                        if (status == 1) { //申报过课题
+                            Info.mSubjectData = shenbao.data;
+                            mView.onShengbao();
+                        } else {
+                            mView.onUnShengbao(status, msg);
                         }
+
                     }
                 });
 

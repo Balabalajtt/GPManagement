@@ -29,6 +29,7 @@ public class ShengbaoShowActivity extends BaseActivity implements View.OnClickLi
     private TextView mTvGuideTeacher;
     private TextView mTvFileName;
 
+
     private static final String TAG = "ShengbaoShowActivity";
 
     @Override
@@ -49,17 +50,17 @@ public class ShengbaoShowActivity extends BaseActivity implements View.OnClickLi
         mImBack = findViewById(R.id.im_back);
 
         mImBack.setOnClickListener(this);
-        mTvSubjectName.setText(Info.mShengbaoData.subjectName);
-        mTvTopicSource.setText(Info.mShengbaoData.topicSource);
-        mTvSubjectType.setText(Info.mShengbaoData.subjectType);
-        mTvTopicType.setText(Info.mShengbaoData.topicType);
-        mTvTopicPaper.setText(Info.mShengbaoData.topicPaper);
-        mTvAbility.setText(Info.mShengbaoData.ability);
-        mTvTarget.setText(Info.mShengbaoData.target);
-        mTvGuideTeacher.setText(Info.mShengbaoData.guideTeacher);
-        Log.d(TAG, "onCreate: " + Info.mShengbaoData.attachment);
+        mTvSubjectName.setText(Info.mSubjectData.subjectName);
+        mTvTopicSource.setText(Info.mSubjectData.topicSource);
+        mTvSubjectType.setText(Info.mSubjectData.subjectType);
+        mTvTopicType.setText(Info.mSubjectData.topicType);
+        mTvTopicPaper.setText(Info.mSubjectData.topicPaper);
+        mTvAbility.setText(Info.mSubjectData.ability);
+        mTvTarget.setText(Info.mSubjectData.target);
+        mTvGuideTeacher.setText(Info.mSubjectData.guideTeacher);
+        Log.d(TAG, "onCreate: " + Info.mSubjectData.attachment);
 
-        if (TextUtils.isEmpty(Info.mShengbaoData.attachment) || Info.mShengbaoData.attachment.equals("null")) {
+        if (TextUtils.isEmpty(Info.mSubjectData.attachment) || Info.mSubjectData.attachment.equals("null")) {
             mTvFileName.setText("无附件");
             mFujian.setClickable(false);
         } else {
@@ -75,8 +76,8 @@ public class ShengbaoShowActivity extends BaseActivity implements View.OnClickLi
                 finish();
                 break;
             case R.id.bt_fujian:
-                Log.d(TAG, "onClick: " + Info.mShengbaoData.attachment);
-                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(Info.mShengbaoData.attachment/*"http://120.79.196.225:8080/GPManagement/DECLARE_SUBJECT_PATH/04163216/07f8eba28cf04f94b66759cdca5faeac.jpg"*/));
+                Log.d(TAG, "onClick: " + Info.mSubjectData.attachment);
+                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(Info.mSubjectData.attachment/*"http://120.79.196.225:8080/GPManagement/DECLARE_SUBJECT_PATH/04163216/07f8eba28cf04f94b66759cdca5faeac.jpg"*/));
                 request.setDestinationInExternalPublicDir("/download/", "shengbao");
                 DownloadManager downloadManager= (DownloadManager) this.getSystemService(Context.DOWNLOAD_SERVICE);
                 downloadManager.enqueue(request);

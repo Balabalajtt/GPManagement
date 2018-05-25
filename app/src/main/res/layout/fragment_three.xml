@@ -13,6 +13,7 @@
         android:background="@color/colorGrey"/>
 
     <LinearLayout
+        android:id="@+id/ll_shouxin"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -48,6 +49,7 @@
         android:background="@color/colorGrey"/>
 
     <LinearLayout
+        android:id="@+id/ll_faxin"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -82,7 +84,9 @@
         android:layout_height="1px"
         android:layout_marginTop="16dp"
         android:background="@color/colorGrey"/>
+
     <LinearLayout
+        android:id="@+id/ll_zhidao"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -118,6 +122,7 @@
         android:background="@color/colorGrey"/>
 
     <LinearLayout
+        android:id="@+id/ll_connect"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

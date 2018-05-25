@@ -1,5 +1,7 @@
 package com.ylxt.gpmanagement.work.service;
 
+import com.ylxt.gpmanagement.work.data.gson.Shengbao;
+
 import okhttp3.ResponseBody;
 import rx.Observable;
 
@@ -8,5 +10,5 @@ import rx.Observable;
  */
 
 public interface SubjectService {
-    Observable<ResponseBody> checkShengbao();
+    Observable<Shengbao> checkShengbao();
 }

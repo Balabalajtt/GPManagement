@@ -48,7 +48,12 @@ public class LoginPresenter extends BasePresenter<LoginView> {
                                 Info.phone = data.getString("phone");
                                 Info.email = data.getString("email");
                                 Info.type = data.getInt("type");
-                                mView.onLoginSucc(msg);
+
+                                if (Info.type == 1) {
+                                    mView.onLoginTeacherSucc(msg);
+                                } else {
+                                    mView.onLoginSucc(msg);
+                                }
                             }
 
 

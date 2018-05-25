@@ -1,6 +1,8 @@
 package com.ylxt.gpmanagement.work.data.api;
 
 import com.ylxt.gpmanagement.base.common.Constant;
+import com.ylxt.gpmanagement.work.data.gson.Shengbao;
+import com.ylxt.gpmanagement.work.data.gson.Subject;
 
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
@@ -10,7 +12,6 @@ import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
-import retrofit2.http.Path;
 import rx.Observable;
 
 /**
@@ -24,11 +25,7 @@ public interface SubjectApi {
     Observable<ResponseBody> postFujian(@Part("type") int type, @Part MultipartBody.Part file);
 
     @POST(Constant.CHECK_SHENGBAO)
-    Observable<ResponseBody> checkShengbao();
-
-    @POST("subject/get_{type}_subject.do")
-    Observable<ResponseBody> check(@Path("type") String type);
-
+    Observable<Shengbao> checkShengbao();
 
     @POST(Constant.KAITI)
     @FormUrlEncoded
@@ -47,5 +44,14 @@ public interface SubjectApi {
                                           @Field("target") String ta,
                                           @Field("guideTeacher") String gt);
 
+    @POST(Constant.XUANTI)
+    @FormUrlEncoded
+    @Headers("Content-Type: application/x-www-form-urlencoded")
+    Observable<ResponseBody> chooseSubject(@Field("id") int id);
 
+    @POST(Constant.NENGXUANDETI)
+    Observable<Subject> getSubjects();
+
+    @POST(Constant.CHECK_XUANTI)
+    Observable<Shengbao> checkXuanti();
 }

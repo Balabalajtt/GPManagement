@@ -9,5 +9,5 @@ import com.ylxt.gpmanagement.base.presenter.view.BaseView;
 public interface SubjectView extends BaseView {
     void onShengbao();
 
-    void onUnShengbao();
+    void onUnShengbao(int status, String msg);
 }
