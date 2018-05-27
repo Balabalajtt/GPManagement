@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/arrowleft"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="开题报告"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
+<ScrollView
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选题目的（为什么选该课题）:"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/et_purpose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="前期基础:"/>
+
+    <EditText
+        android:id="@+id/et_basis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="要解决的问题:"/>
+
+        <EditText
+            android:id="@+id/et_problems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="工作思路和方案:"/>
+        <EditText
+            android:id="@+id/et_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="附件:"/>
+
+            <TextView
+                android:id="@+id/tv_wenjian"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="某某文件"/>
+
+            <Button
+                android:id="@+id/bt_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="center_vertical"
+                android:text="下载文件"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_opinion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="指导教师审阅意见:"/>
+
+        <EditText
+            android:id="@+id/et_opinion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/bt_yes"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="4dp"
+                android:text="同意"/>
+
+            <Button
+                android:id="@+id/bt_no"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="4dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
+                android:text="拒绝"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

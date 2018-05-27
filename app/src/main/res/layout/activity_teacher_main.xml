@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -32,36 +31,139 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/bt_shenbao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="处理申报课题" />
 
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"
+                android:layout_marginTop="16dp"/>
             <Button
                 android:id="@+id/bt_fabu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
+                android:textSize="16sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
                 android:text="发布课题" />
 
-            <Button
-                android:id="@+id/bt_my_subjects"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="我管理的课题" />
+                android:layout_height="1px"
+                android:background="@color/colorGrey"/>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"
+                android:layout_marginTop="16dp"/>
+            <Button
+                android:id="@+id/bt_shenbao"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:textSize="16sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
+                android:text="处理申报课题" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"/>
+            <Button
+                android:id="@+id/bt_deal_kaiti"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:textSize="16sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
+                android:text="处理开题报告"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"/>
+            <Button
+                android:id="@+id/bt_deal_zhongqi"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:textSize="16sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
+                android:text="处理中期报告"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"/>
+            <Button
+                android:id="@+id/bt_deal_dinggao"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:textSize="16sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
+                android:text="处理论文定稿"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"
+                android:layout_marginTop="16dp"/>
             <Button
                 android:id="@+id/bt_faxin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
+                android:textSize="16sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
                 android:text="发信箱"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"/>
 
             <Button
                 android:id="@+id/bt_shouxin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
+                android:textSize="16sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
                 android:text="收信箱"/>
 
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorGrey"/>
+
+            <Button
+                android:id="@+id/bt_logout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:textSize="16sp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
+                android:text="退出登录"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey"/>
 
         </LinearLayout>
 

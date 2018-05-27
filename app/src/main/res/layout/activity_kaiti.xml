@@ -20,6 +20,7 @@
             android:src="@drawable/arrowleft"/>
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -32,6 +33,7 @@
 
 
 <ScrollView
+    android:id="@+id/scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -47,7 +49,9 @@
         android:text="选题目的（为什么选该课题）:"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"/>
+
     <EditText
+        android:id="@+id/et_purpose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorWhite" />
@@ -58,7 +62,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="4dp"
         android:text="前期基础:"/>
+
     <EditText
+        android:id="@+id/et_basis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorWhite" />
@@ -69,7 +75,9 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp"
             android:text="要解决的问题:"/>
+
         <EditText
+            android:id="@+id/et_problems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWhite" />
@@ -81,6 +89,7 @@
             android:layout_marginBottom="4dp"
             android:text="工作思路和方案:"/>
         <EditText
+            android:id="@+id/et_plan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWhite" />
@@ -116,19 +125,22 @@
                 android:textColor="@color/colorWhite"
                 android:background="@color/colorPrimary" />
 
-
-            <Button
-                android:id="@+id/bt_fujian"
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:layout_marginRight="16dp"
-                android:layout_gravity="center_vertical"
-                android:text="文件上传"
-                android:textColor="@color/colorWhite"
-                android:background="@color/colorPrimary"
-                android:clickable="false"/>
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_opinion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone"
+            android:text="指导教师审阅意见:"/>
+        <EditText
+            android:id="@+id/et_opinion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/colorWhite" />
 
         <Button
             android:id="@+id/bt_tijiao"
@@ -142,4 +154,14 @@
 
     </LinearLayout>
 </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_tishi"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="请先完成之前流程"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
 </LinearLayout>

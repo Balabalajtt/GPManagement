@@ -2,7 +2,12 @@ package com.ylxt.gpmanagement.work.service.impl;
 
 import com.ylxt.gpmanagement.base.net.RetrofitFactory;
 import com.ylxt.gpmanagement.work.data.api.SubjectApi;
+import com.ylxt.gpmanagement.work.data.gson.Dinggao;
+import com.ylxt.gpmanagement.work.data.gson.Kaiti;
+import com.ylxt.gpmanagement.work.data.gson.Zhongqi;
 import com.ylxt.gpmanagement.work.service.KaiTiService;
+
+import java.util.List;
 
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
@@ -21,8 +26,38 @@ public class KaiTiServiceImpl implements KaiTiService {
     }
 
     @Override
-    public Observable<ResponseBody> postKaiTi() {
+    public Observable<ResponseBody> postKaiTi(String purpose, String basis, String problems, String plan) {
         return RetrofitFactory.INSTANCE.create(SubjectApi.class)
-                .postKaiTi("", "");
+                .postKaiTi(purpose, basis, problems, plan);
+    }
+
+    @Override
+    public Observable<Kaiti> checkKaiti() {
+        return RetrofitFactory.INSTANCE.create(SubjectApi.class)
+                .checkKaiti();
+    }
+
+    @Override
+    public Observable<ResponseBody> postZhongqi(String area, String conclusion) {
+        return RetrofitFactory.INSTANCE.create(SubjectApi.class)
+                .postZhongqi(area, conclusion);
+    }
+
+    @Override
+    public Observable<Zhongqi> checkZhongqi() {
+        return RetrofitFactory.INSTANCE.create(SubjectApi.class)
+                .checkZhongqi();
+    }
+
+    @Override
+    public Observable<ResponseBody> postDinggao(int type, List<MultipartBody.Part> parts) {
+        return RetrofitFactory.INSTANCE.create(SubjectApi.class)
+                .postDinggao(type, parts);
+    }
+
+    @Override
+    public Observable<Dinggao> checkDinggao() {
+        return RetrofitFactory.INSTANCE.create(SubjectApi.class)
+                .checkDinggao();
     }
 }

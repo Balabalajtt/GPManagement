@@ -35,7 +35,16 @@
         <activity android:name=".work.ui.activity.SendActivity" />
         <activity android:name=".work.ui.activity.RizhiActivity" />
         <activity android:name=".teacher.ui.activity.ShenbaoShowActivity" />
-        <activity android:name=".teacher.ui.activity.TeacherAddSubjectActivity"></activity>
+        <activity android:name=".teacher.ui.activity.TeacherAddSubjectActivity" />
+        <activity android:name=".teacher.ui.activity.TeacherKaitiActivity" />
+        <activity android:name=".teacher.ui.activity.KaitiShowActivity" />
+        <activity android:name=".work.ui.activity.ZhongqiActivity" />
+        <activity android:name=".teacher.ui.activity.TeacherZhongqiActivity" />
+        <activity android:name=".teacher.ui.activity.ZhongqiShowActivity" />
+        <activity android:name=".work.ui.activity.DinggaoActivity" />
+        <activity android:name=".teacher.ui.activity.TeacherDinggaoActivity" />
+        <activity android:name=".teacher.ui.activity.DinggaoShowActivity" />
+        <activity android:name=".work.ui.activity.DabianActivity"></activity>
     </application>
 
 </manifest>

@@ -131,16 +131,19 @@ public class ShengbaoActivity extends BaseMvpActivity<ShengbaoPresenter> impleme
 
     @Override
     public void onPostShengbao(int status, String msg) {
-        if (status == 1) {
-
-            RequestBody requestFile = RequestBody
-                    .create(MediaType.parse("*/*"), mFile);
-            MultipartBody.Part body = MultipartBody.Part
-                    .createFormData("file", mFile.getName(), requestFile);
-            mPresenter.postFujian(body);
-
-        }
         Toast.makeText(ShengbaoActivity.this, msg, Toast.LENGTH_SHORT).show();
+        if (status == 1) {
+            if (mFile != null) {
+                RequestBody requestFile = RequestBody
+                        .create(MediaType.parse("*/*"), mFile);
+                MultipartBody.Part body = MultipartBody.Part
+                        .createFormData("file", mFile.getName(), requestFile);
+                mPresenter.postFujian(body);
+            }
+        } else {
+            finish();
+        }
+
     }
 
     @Override

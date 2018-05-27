@@ -33,7 +33,19 @@ public class Constant {
     public static final String XUANTI = "subject/select_subject.do";
     public static final String NENGXUANDETI = "subject/get_unselected_subjects.do";
 
-    public static final String KAITI = "";
+    //开题
+    public static final String KAITI = "report/submit_start_report.do";
+    public static final String CHECK_KAITI = "report/check_start_report_valid.do";
+
+    //中期
+    public static final String ZHONGQI = "report/submit_middle_report.do";
+    public static final String CHECK_ZHONGQI = "report/check_middle_report_valid.do";
+
+    //定稿
+    public static final String DINGGAO = "file/upload.do";
+    public static final String CHECK_DINGGAO = "paper/check_paper_valid.do";
+
+    public static final String CHECK_DABIAN = "paper/check_result_valid.do";
 
     //信
     public static final String SHOUXIN = "message/get_in_mails.do";
@@ -45,6 +57,12 @@ public class Constant {
     public static final String TESHENBAO = "subject/refresh_audit_list.do";
     public static final String DEALSHENBAO = "subject/confirm_subject.do";
     public static final String PUBLISH = "subject/publish_subject.do";
+    public static final String TEKAITI = "report/refresh_start_report_audit_list.do";
+    public static final String DEALKAITI = "report/confirm_start_report.do";
+    public static final String TEZHONGQI = "report/refresh_middle_report_audit_list.do";
+    public static final String DEALZHONGQI = "report/confirm_middle_report.do";
+    public static final String TEDINGGAO = "paper/refresh_paper_audit_list.do";
+    public static final String DEALDINGGAO = "paper/confirm_paper.do";
 
 
     //全局

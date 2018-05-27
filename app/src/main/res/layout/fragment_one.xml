@@ -219,6 +219,8 @@
                     android:layout_height="match_parent"
                     android:layout_margin="8dp">
 
+
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -235,59 +237,41 @@
                         android:background="@color/colorGrey"
                         android:layout_marginBottom="4dp"/>
 
-                    <!--<LinearLayout-->
-                        <!--android:id="@+id/ll_wenjian_one"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_margin="4dp">-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_wenjian_content_one"-->
-                            <!--android:layout_weight="1"-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="aaaaaaaa"/>-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_wenjian_time_one"-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="2018-05-14"/>-->
-                    <!--</LinearLayout>-->
+                    <LinearLayout
+                        android:id="@+id/ll_wenjian_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp">
+                        <TextView
+                            android:id="@+id/tv_wenjian_content_one"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="报告模板"/>
+                        <TextView
+                            android:id="@+id/tv_wenjian_time_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2018-05-14"/>
+                    </LinearLayout>
 
-                    <!--<LinearLayout-->
-                        <!--android:id="@+id/ll_wenjian_two"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_margin="4dp">-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_wenjian_content_two"-->
-                            <!--android:layout_weight="1"-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="aaaaaaaa"/>-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_wenjian_time_two"-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="2018-05-14"/>-->
-                    <!--</LinearLayout>-->
-
-                    <!--<LinearLayout-->
-                        <!--android:id="@+id/ll_wenjian_three"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_margin="4dp">-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_wenjian_content_three"-->
-                            <!--android:layout_weight="1"-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="aaaaaaaa"/>-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_wenjian_time_three"-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="2018-05-14"/>-->
-                    <!--</LinearLayout>-->
+                    <LinearLayout
+                        android:id="@+id/ll_wenjian_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp">
+                        <TextView
+                            android:id="@+id/tv_wenjian_content_two"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="答辩相关信息"/>
+                        <TextView
+                            android:id="@+id/tv_wenjian_time_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2018-05-14"/>
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -329,59 +313,23 @@
                         android:background="@color/colorGrey"
                         android:layout_marginBottom="4dp"/>
 
-                    <!--<LinearLayout-->
-                        <!--android:id="@+id/ll_lunwen_one"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_margin="4dp">-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_lunwen_content_one"-->
-                            <!--android:layout_weight="1"-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="aaaaaaaa"/>-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_lunwen_time_one"-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="某某某"/>-->
-                    <!--</LinearLayout>-->
-
-                    <!--<LinearLayout-->
-                        <!--android:id="@+id/ll_lunwen_two"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_margin="4dp">-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_lunwen_content_two"-->
-                            <!--android:layout_weight="1"-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="aaaaaaaa"/>-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_lunwen_time_two"-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="某某某"/>-->
-                    <!--</LinearLayout>-->
-
-                    <!--<LinearLayout-->
-                        <!--android:id="@+id/ll_lunwen_three"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_margin="4dp">-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_lunwen_content_three"-->
-                            <!--android:layout_weight="1"-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="aaaaaaaa"/>-->
-                        <!--<TextView-->
-                            <!--android:id="@+id/tv_lunwen_time_three"-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="某某某"/>-->
-                    <!--</LinearLayout>-->
+                    <LinearLayout
+                        android:id="@+id/ll_lunwen_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp">
+                        <TextView
+                            android:id="@+id/tv_lunwen_content_three"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="论文"/>
+                        <TextView
+                            android:id="@+id/tv_lunwen_time_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="某某某"/>
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -106,12 +106,12 @@ public class ForthFragment extends BaseMvpFragment<MinePresenter> implements Min
         dialog.setContentView(view);
         dialog.setCanceledOnTouchOutside(true);
         //设置对话框的大小
-        view.setMinimumHeight(500);
+        view.setMinimumHeight(800);
         view.setMinimumWidth(800);
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
         lp.width = 800;
-        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.height = 800;
         lp.gravity = Gravity.CENTER;
         dialogWindow.setAttributes(lp);
 
@@ -142,12 +142,12 @@ public class ForthFragment extends BaseMvpFragment<MinePresenter> implements Min
         dialog.setContentView(view);
         dialog.setCanceledOnTouchOutside(true);
         //设置对话框的大小
-        view.setMinimumHeight(500);
+        view.setMinimumHeight(800);
         view.setMinimumWidth(800);
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
         lp.width = 800;
-        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.height = 800;
         lp.gravity = Gravity.CENTER;
         dialogWindow.setAttributes(lp);
 

@@ -40,7 +40,9 @@ public class TeacherShenbaoActivity extends BaseMvpActivity<ShenbaoPresenter> im
                 Intent intent = new Intent(TeacherShenbaoActivity.this, ShenbaoShowActivity.class);
 //                intent.putExtra("shenbao", mDatas.get(position));
                 Info.mSubjectData = mDatas.get(position);
+
                 startActivity(intent);
+                finish();
             }
         });
         mRecyclerView.setAdapter(mAdapter);
